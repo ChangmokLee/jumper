@@ -16,6 +16,9 @@ the Activity Bar. Next, select the project you'd like to run from the
 drop down list at the top of the Side Bar. Lastly, click the green 
 arrow or "start debugging" button.
 
+## Required Technologies
+* dotnet 6.0
+
 ## Description
 
 The Director is responsible for the overall flow of the game. 
