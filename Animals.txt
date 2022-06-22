@@ -1,0 +1,11 @@
+Bison
+Boar
+Elephant
+Frog
+Hyena
+Wolf
+Monkey
+Bear
+Panda
+Otter
+Bat
