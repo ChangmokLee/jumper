@@ -4,12 +4,12 @@ using System.IO;
 
 namespace jumper
 {
-    public class HiddenWord{
+    public class Word{
         public string hiddenword;
         List<char> answer = new List<char>();
         public List<char> guess = new List<char>();
 
-        public HiddenWord(){
+        public Word(){
             
         }
 

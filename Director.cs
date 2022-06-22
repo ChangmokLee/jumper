@@ -10,7 +10,7 @@ namespace jumper
         private string chosenWord;
 
         private TerminalService terminalService = new TerminalService();
-        public HiddenWord hiddenWord = new HiddenWord();
+        public Word Word = new Word();
         private Jumper jumper = new Jumper();
         public int tries = 0;
         public int numberOfGuesses = 0;
@@ -40,10 +40,10 @@ namespace jumper
         private void StartUp()
         {
             Console.WriteLine("\nHint: Animals");
-            chosenWord = hiddenWord.pullWord();
-            hiddenWord.listWord(chosenWord);
-            hiddenWord.createHiddenWord();
-            hiddenWord.printGuess();
+            chosenWord = Word.pullWord();
+            Word.listWord(chosenWord);
+            Word.createHiddenWord();
+            Word.printGuess();
         }
         private void GetInputs()
         {
@@ -63,9 +63,9 @@ namespace jumper
         private void DoUpdates()
         {
             numberOfGuesses = guessedLetters.Count;
-            int usedTries = hiddenWord.compare(guessedLetters, numberOfGuesses);
+            int usedTries = Word.compare(guessedLetters, numberOfGuesses);
             tries = tries + usedTries;
-            isPlaying = jumper.checkJumper(hiddenWord.guess, tries);
+            isPlaying = jumper.checkJumper(Word.guess, tries);
         }
 
 
@@ -73,11 +73,11 @@ namespace jumper
         {
             Console.WriteLine("\n");
             if (isPlaying){
-                hiddenWord.printGuess();
+                Word.printGuess();
             }
             else {
                 jumper.printJumper(tries);
-                hiddenWord.printAnswer();
+                Word.printAnswer();
                 Console.WriteLine("\n");
             }
   
